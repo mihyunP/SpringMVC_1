@@ -3,15 +3,16 @@
 ### 1) 웹 서버, 웹 애플리케이션 서버
 
 웹 - HTTP 기반
+
 ![image](https://user-images.githubusercontent.com/69749222/189489834-04152686-872d-413f-919d-d4cf3b05e0d0.png)
 
 HTTP 메시지에 모든 것을 전송
 
-: HTML, TEXT • IMAGE, 음성, 영상, 파일 • JSON, XML (API)등 거의 모든 형태의 데이터 전송 가능, 서버간의 데이터 주고받기 가능
+: `HTML, TEXT • IMAGE, 음성, 영상, 파일 • JSON, XML (API)`등 거의 모든 형태의 데이터 전송 가능, 서버간의 데이터 주고받기 가능
 
 
 
-웹서버 vs 웹애플리케이션서버(WAS)
+**웹서버 vs 웹애플리케이션서버(WAS)**
 
 **웹서버**
 
@@ -21,7 +22,8 @@ HTTP 메시지에 모든 것을 전송
 
 예)NGINX, APACHE
 
-![image-20220828152919764](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828152919764.png)
+![image](https://user-images.githubusercontent.com/69749222/189489889-7a853172-c9b5-4f78-aedb-0a4637e8db0f.png)
+
 
 
 
@@ -31,11 +33,12 @@ HTTP 메시지에 모든 것을 전송
 
 웹서버 기능 + 프로그램 코드를 실행해서 `애플리케이션 로직` 수행
 
-동적 html(사람들마다 다른 html 페이지 보여줄 수 있음), http API(JSON), 서블릿, JSP, 스프링 MVC
+동적 html(사람들마다 다른 html 페이지 보여줄 수 있음), http API(JSON), 서블릿, JSP, 스프링 MVC 제공
 
 예) 톰캣, 제티, Undertow
 
-![image-20220828153220132](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828153220132.png)
+![image](https://user-images.githubusercontent.com/69749222/189489944-25899f05-786e-45b4-8472-4ca48c87a140.png)
+
 
 
 
@@ -49,29 +52,29 @@ WAS가 너무 많은 역할을 담당하면 서버 과부하 우려가 있음,
 
 웹 시스템 구성 - WEB, WAS, DB
 
-![image-20220828153702612](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828153702612.png)
+![image](https://user-images.githubusercontent.com/69749222/189490553-e826fcb6-8c26-49e4-866b-0c5c4a31b055.png)
+
 
 -> Web Server를 추가하여 정적 리소스는 웹 서버가 처리, WAS는 애플리케이션 로직 전담
 
 
 
-### 서블릿
+### 2)서블릿
 
 html form 데이터 전송
 
-![image-20220828154205923](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828154205923.png)
-
+![image](https://user-images.githubusercontent.com/69749222/189490563-e39f7f6f-fae5-4ca5-a6ad-c06fcdd5f6ca.png)
 
 
 서버에서 처리해야 하는 업무
 
-![image-20220828154458088](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828154458088.png)
+![image](https://user-images.githubusercontent.com/69749222/189490595-9f49044b-444f-485b-ba09-21d9cf659d4b.png)
 
-비즈니스 로직 제외 모든 웹 애플리케이션 서버의 역할을 서블릿이 대신해준다!
+=> 비즈니스 로직 제외 모든 웹 애플리케이션 서버의 역할을 서블릿이 대신해준다!
 
 서블릿
 
-![image-20220828154649151](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828154649151.png)
+![image](https://user-images.githubusercontent.com/69749222/189490610-ae669930-bd18-4c6c-9a07-12d58a687f86.png)
 
 urlPatterns(/hello)의 URL이 호출되면 서블릿 코드가 실행
 
@@ -83,9 +86,9 @@ HTTP 응답 정보를 편리하게 사용할 수 있는 HttpServletResponse
 
 
 
-서블릿 HTTP 요청, 응답 흐름
+<서블릿 HTTP 요청, 응답 흐름>
 
-![image-20220828155000336](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828155000336.png)
+![image](https://user-images.githubusercontent.com/69749222/189490640-3a6730d0-2a7c-41e0-9e40-448246940743.png)
 
 HTTP 요청 시,
 
@@ -108,47 +111,49 @@ Request, Reponse 객체는 http 요청별로 새로 생성되지만, 서블릿 �
 
 
 
-### 동시요청 - 멀티 쓰레드
+### 3)동시요청 - 멀티 쓰레드
 
-![image-20220828160319407](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828160319407.png)
+![image](https://user-images.githubusercontent.com/69749222/189490701-8b0d05f3-7893-4403-b720-6371583aff0a.png)
 
 쓰레드가 서블릿 호출함
 
 쓰레드 : 애플리케이션 코드를 하나하나 순차적으로 실행함
 
-자바 메인 메서드를 처음 실행하면 main이라는 이름의 쓰레드가 실행
+ex) 자바 메인 메서드를 처음 실행하면 main이라는 이름의 쓰레드가 실행
 
-![image-20220828160528137](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828160528137.png)
 
-![image-20220828160603064](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828160603064.png)
+요청이 올때마다 쓰레드 생성 vs 쓰레드 풀
 
 요청이 올때마다 쓰레드 생성
+![image](https://user-images.githubusercontent.com/69749222/189490807-8acd344a-e682-4452-9f7a-cec0a806fbcf.png)
 
 
+![image](https://user-images.githubusercontent.com/69749222/189490814-45692e59-f45c-4e35-9cd6-5e766aa65020.png)
 
-![image-20220828161038024](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828161038024.png)
 
-![image-20220828161203766](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828161203766.png)
 
 쓰레드 풀
+![image](https://user-images.githubusercontent.com/69749222/189490825-ed8768ad-b827-48fe-8d2f-1050fac1f7d9.png)
+![image](https://user-images.githubusercontent.com/69749222/189490842-54a6be8d-33b2-43b2-8b36-dd89ee8d22e3.png)
 
-특징
+
+(특징)
 
 요청마다 쓰래드 생성의 단점 보완
 
-필요한 쓰레드를 쓰레드 풀에 보관하고 관리한다
+필요한 쓰레드를 쓰레드 풀에 보관하고 관리한다.
 
 쓰레드 풀에 생성 가능한 쓰레드의 최대치를 관리한다. 톰캣은 최대 200개 기본 설정
 
-사용
+(사용)
 
-쓰레드가 필요하면 이미 생성되어있는 쓰레드를 쓰레드 풀에서 꺼내서 사용한다
+쓰레드가 필요하면 이미 생성되어있는 쓰레드를 쓰레드 풀에서 꺼내서 사용한다.
 
-사용을 종료하면 쓰레드 풀에 해당 쓰레드를 반납한다
+사용을 종료하면 쓰레드 풀에 해당 쓰레드를 반납한다.
 
 최대 쓰레드가 모두 사용중이어서 쓰레드 풀에 쓰레드가 없을 때, 기다리는 요청을 거절하거나 특정 숫자만큼만 대기하도록 설정할 수 있다.
 
-장점
+(장점)
 
 쓰레드 생성 비용(CPU) 절약, 빠른 응답 시간
 
@@ -159,24 +164,27 @@ Request, Reponse 객체는 http 요청별로 새로 생성되지만, 서블릿 �
 동시 요청 많으면, 서버 리소스는 여유롭자만 클라이언트 응답 지연
 
 쓰레드 풀 너무 높게 설정하면,
-
+동시 요청 많으면, CPU, 메모리 리소스 임계점 초과로 서버 다운
 
 
 멀티 쓰레드에 대한 부분은 WAS가 처리
 
 
 
-### HTML, HTTP API, SSR, CSR
+### 4)HTML, HTTP API, SSR, CSR
 
-![image-20220828162530052](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828162530052.png)
+`HTML`
+![image](https://user-images.githubusercontent.com/69749222/189491064-5ded3fe2-3577-4413-aef7-f2c353fee176.png)
 
-![image-20220828162559011](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828162559011.png)
+![image](https://user-images.githubusercontent.com/69749222/189491111-f581632b-1106-4f32-abef-0b2b12ce1660.png)
 
-![image-20220828162630817](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828162630817.png)
+`HTTP API`
+![image](https://user-images.githubusercontent.com/69749222/189491159-73095efc-8d21-498c-a723-5725b5ef4817.png)
 
-![image-20220828162933498](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828162933498.png)
+![image](https://user-images.githubusercontent.com/69749222/189491173-b36dab1d-bfd1-4e98-a1be-6d83e7dd7c61.png)
 
- 주로 JSON 형태로 데이터 통신
+
+주로 JSON 형태로 데이터 통신
 
 UI 클라이언트 접점
 
@@ -194,7 +202,7 @@ HTTP 방식으로 통신하는 3가지
 
 
 
-SSR-서버 사이드 렌더링
+`SSR(서버 사이드 렌더링)`
 
 : 서버에서 최종 HTML을 생성해서 클라이언트에 전달
 
@@ -202,11 +210,11 @@ SSR-서버 사이드 렌더링
 
 관련기술 :  JSP, 타임리프 -> 백엔드 개발자
 
-![image-20220828163413373](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828163413373.png)
+![image](https://user-images.githubusercontent.com/69749222/189491280-3f5c1618-3ba4-4160-96c7-2d787453caf6.png)
 
 
 
-CSR-클라이언트 사이드 렌더링
+`CSR(클라이언트 사이드 렌더링)`
 
 : HTML 결과를 자바스크립트를 사용해 웹 브라우저에서 동적으로 생성해서 적용
 
@@ -214,11 +222,12 @@ CSR-클라이언트 사이드 렌더링
 
 관련기술: React, Vue.js -> 프론트엔드 개발자
 
-![image-20220828163653718](C:\Users\woori\AppData\Roaming\Typora\typora-user-images\image-20220828163653718.png)
+![image](https://user-images.githubusercontent.com/69749222/189491296-966c7023-f760-4c25-834a-64f1c3e80de5.png)
 
 
 
-### 자바 백엔드 웹 기술 역사
+
+### 5)자바 백엔드 웹 기술 역사
 
 자바 웹 기술 역사
 
@@ -230,7 +239,8 @@ Web Servlet - Spring MVC
 
 Web Reactive - Spring WebFlux
 
- 
+
+
 
 자바 뷰 템플릿 역사
 
