@@ -91,8 +91,6 @@ Referer: 경유한 웹 사이트에 대한 정보
 ④ 요청 바디: 클라이언트가 서버에 실제 요청한 내용
 ```
 
----------
-
 **HTTP Response Message**
 
 : 서버 -> 클라이언트(브라우저) 전송하는 메시지
@@ -130,7 +128,7 @@ Content-MD5: Body 컨텐츠의 MD5 코드를 제공하는데 사용된다.
 
 ### 4) HTTP Request 메소드
 
- : 클라이언트가 웹 서버에게 사용자 요청의 목적이나 종류를 알리는 수단
+ : 클라이언트가 웹 서버에게 사용자 요청의 목적이나 종류를 알리는 방법
 
 ![image](https://user-images.githubusercontent.com/69749222/189536894-7921fcff-15cd-44bd-a7c8-2d4b8cfbac06.png)
 
@@ -141,6 +139,10 @@ Content-MD5: Body 컨텐츠의 MD5 코드를 제공하는데 사용된다.
 - PUT : 리소스를 대체, 해당 리소스가 없으면 생성
 - PATCH : 리소스를 일부만 변경
 - DELETE : 리소스 삭제
+
+Cf)
+![image](https://user-images.githubusercontent.com/69749222/189537238-094c12ba-e4d4-49de-9e45-9b47e661b52e.png)
+
 
 (기타 메소드 4가지)
 
