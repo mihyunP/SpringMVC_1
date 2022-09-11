@@ -165,7 +165,8 @@ ex) 자바 메인 메서드를 처음 실행하면 main이라는 이름의 쓰�
 
 동시 요청 많으면, 서버 리소스는 여유롭자만 클라이언트 응답 지연
 
-쓰레드 풀 너무 높게 설정하면,
+
+cf. 쓰레드 풀 너무 높게 설정하면,
 
 동시 요청 많으면, CPU, 메모리 리소스 임계점 초과로 서버 다운
 
@@ -176,11 +177,13 @@ ex) 자바 메인 메서드를 처음 실행하면 main이라는 이름의 쓰�
 ### 4)HTML, HTTP API, SSR, CSR
 
 `HTML`
+
 ![image](https://user-images.githubusercontent.com/69749222/189491064-5ded3fe2-3577-4413-aef7-f2c353fee176.png)
 
 ![image](https://user-images.githubusercontent.com/69749222/189491111-f581632b-1106-4f32-abef-0b2b12ce1660.png)
 
 `HTTP API`
+
 ![image](https://user-images.githubusercontent.com/69749222/189491159-73095efc-8d21-498c-a723-5725b5ef4817.png)
 
 ![image](https://user-images.githubusercontent.com/69749222/189491173-b36dab1d-bfd1-4e98-a1be-6d83e7dd7c61.png)
